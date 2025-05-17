@@ -5,5 +5,6 @@ package com.vitamincode03;
 public class Main {
     public static void main(String[] args) {
         System.out.print("Hello Vitamin Code 03 - Git! - QuocDat");
+        System.out.println(">> Hello Admin");
     }
 }
