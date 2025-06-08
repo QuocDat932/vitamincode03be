@@ -1,13 +1,27 @@
 package com.vitamincode03;
 
 public class SinhVien {
+    String id;
     String fullName;
-    boolean gender;
+    String gender;
     String major;
-    // record = bản ghi
-    // Sinh Viên là Class
-    // Sinh Viên Bùi Quôc Đạt là 1 đối tượng (Object) thuộc về lớp SinhVien
-    // Sinh Viên Khánh Nguyễn là 1 đối tượng (Object) thuộc về lớp SinhVien
-    // Sinh Viên Tuyết Trinh là 1 đối tượng (Object) thuộc về lớp SinhVien
-    // DataType variableName = Value;
+    // OOP = Properties + Methods
+    // Constructor():
+    //  + Hàm tạo là hàm để khởi tạo ra 1 đối tượng
+    //  + Tên hàm giống tên class
+    SinhVien(){}
+    SinhVien(String id, String fullName, String gender, String major) {
+        this.id = id;
+        this.fullName = fullName;
+        this.gender = gender;
+        this.major = major;
+    }
+    void outputData(){
+        System.out.println("---------------------------------------------- ");
+        System.out.println("Id = "+ this.id);
+        System.out.println("Tên Sinh Viên = "+ this.fullName);
+        System.out.println("Giới Tính = "+ this.gender);
+        System.out.println("Chuyên Ngành = "+ this.major);
+        System.out.println("---------------------------------------------- ");
+    }
 }
