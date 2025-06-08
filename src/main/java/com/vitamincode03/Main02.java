@@ -1,7 +1,7 @@
 package com.vitamincode03;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import com.vitamincode03.entity.SinhVien;
+import com.vitamincode03.service.SinhVienService;
 
 public class Main02 {
     public static void main(String[] args) {
