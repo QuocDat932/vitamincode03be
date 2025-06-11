@@ -1,6 +1,6 @@
 package com.vitamincode03.entity;
 
-public class SinhVien {
+public abstract class SinhVien {
     private String id;
     private String fullName;
     private String gender;
@@ -50,12 +50,12 @@ public class SinhVien {
         this.gender = gender;
         this.major = major;
     }
+
     public void outputData(){
         System.out.println("---------------------------------------------- ");
         System.out.println("Id = "+ this.id);
         System.out.println("Tên Sinh Viên = "+ this.fullName);
         System.out.println("Giới Tính = "+ this.gender);
         System.out.println("Chuyên Ngành = "+ this.major);
-        System.out.println("---------------------------------------------- ");
     }
 }

@@ -1,6 +1,5 @@
 package com.vitamincode03;
 
-import com.vitamincode03.entity.SinhVien;
 import com.vitamincode03.service.SinhVienService;
 
 public class Main02 {
@@ -8,5 +7,6 @@ public class Main02 {
         SinhVienService sinhVienService = new SinhVienService();
         sinhVienService.inputListSinhVien();
         sinhVienService.outputDataSinhVien();
+
     }
 }

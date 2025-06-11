@@ -1,6 +1,8 @@
 package com.vitamincode03.service;
 
 import com.vitamincode03.entity.SinhVien;
+import com.vitamincode03.entity.SinhVienDesign;
+import com.vitamincode03.entity.SinhVienIT;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -10,7 +12,14 @@ public class SinhVienService {
     ArrayList<SinhVien> listStudent = new ArrayList<>();
     public void inputListSinhVien(){
         do {
-            SinhVien sv = inputDataSinhVien();
+            System.out.print("Chuyên Ngành IT/Desgin >> ");
+            String major = sc.nextLine();
+            SinhVien sv;
+            if(major.equalsIgnoreCase("IT")){
+                sv = inputDataSinhVienIT();
+            } else{
+                sv = inputDataSinhVienDesign();
+            }
             listStudent.add(sv);
             System.out.print("Nhập tiếp hông (y/n) >> ");
             String answer = sc.nextLine();
@@ -19,22 +28,9 @@ public class SinhVienService {
             }
         } while (true);
     }
-    SinhVien inputDataSinhVien() {
-// Cách 01
-//        System.out.println("------ ");
-//        System.out.print("Mã Sinh Viên = ");
-//        String id = sc.nextLine();
-//        System.out.print("Tên Sinh Viên = ");
-//        String fullName = sc.nextLine();
-//        System.out.print("Giới Tính = ");
-//        String gender = sc.nextLine();
-//        System.out.print("Chuyên Ngành = ");
-//        String major = sc.nextLine();
-//        System.out.println("------ ");
-//        return new SinhVien(id, fullName, gender, major);
-// Cách 02
+    SinhVien inputDataSinhVienIT() {
             System.out.println("------ ");
-            SinhVien sv = new SinhVien();
+            SinhVienIT sv = new SinhVienIT();
             System.out.print("Mã Sinh Viên = ");
             String id = sc.nextLine();
             sv.setId(id);
@@ -47,8 +43,27 @@ public class SinhVienService {
             System.out.print("Chuyên Ngành = ");
             String major = sc.nextLine();
             sv.setMajor(major);
+            System.out.print("Kỹ Thuật = ");
+            String technical = sc.nextLine();
+            sv.setTechnical(technical);
             System.out.println("------ ");
             return sv;
+    }
+
+    SinhVien inputDataSinhVienDesign() {
+        System.out.println("------ ");
+        System.out.print("Mã Sinh Viên = ");
+        String id = sc.nextLine();
+        System.out.print("Tên Sinh Viên = ");
+        String fullName = sc.nextLine();
+        System.out.print("Giới Tính = ");
+        String gender = sc.nextLine();
+        System.out.print("Chuyên Ngành = ");
+        String major = sc.nextLine();
+        System.out.print("kỹ thuật vẽ = ");
+        String paint = sc.nextLine();
+        System.out.println("------ ");
+        return new SinhVienDesign(id, fullName, gender, major, paint);
     }
     public void outputDataSinhVien() {
         listStudent.forEach(e ->{
