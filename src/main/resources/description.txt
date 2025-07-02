@@ -11,3 +11,16 @@ II. OOP (Object Oriented Programming)
         + key:
             *extend: kế thừa lớp cha - lớp cha nên để abstract class
             *final: không cho các lớp khác kế thừa lớp final
+
+    3. Polymorphism ( tính đa hình )
+        + key:
+            *Đa hình thức triển khai:
+                *List: có thể chứa 2 lớp khác nhau nếu chúng cùng kế thừa 1 lớp cha
+                *Object: có thể triển khai trực tiếp từ tên class của nó hoặc class cha của nó
+
+    4. Abstraction ( tính trừu tượng - bán toàn phần )
+        + key:
+            * abstract class ( lớp trừu tượng ):
+                * Tránh tạo trực tiếp 1 object từ abstract class
+            * abstract method ( phương thức trừ tượng ):
+                * Cho phép khai báo tên phương thức trừ tượng và @override o lớp triển khai

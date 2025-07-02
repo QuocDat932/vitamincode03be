@@ -5,7 +5,16 @@ public abstract class SinhVien {
     private String fullName;
     private String gender;
     private String major;
-    // OOP = Properties + Methods
+    private double DTB;
+
+    public double getDTB() {
+        return DTB;
+    }
+
+    public void setDTB(double DTB) {
+        this.DTB = DTB;
+    }
+// OOP = Properties + Methods
     // Constructor():
     //  + Hàm tạo là hàm để khởi tạo ra 1 đối tượng
     //  + Tên hàm giống tên class
@@ -49,6 +58,7 @@ public abstract class SinhVien {
         this.fullName = fullName;
         this.gender = gender;
         this.major = major;
+        this.tinhDTB();
     }
 
     public void outputData(){
@@ -57,5 +67,8 @@ public abstract class SinhVien {
         System.out.println("Tên Sinh Viên = "+ this.fullName);
         System.out.println("Giới Tính = "+ this.gender);
         System.out.println("Chuyên Ngành = "+ this.major);
+        System.out.println("Điểm Trung Bình = "+ this.DTB);
     }
+
+    public abstract void tinhDTB();
 }

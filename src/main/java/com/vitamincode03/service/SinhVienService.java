@@ -29,25 +29,24 @@ public class SinhVienService {
         } while (true);
     }
     SinhVien inputDataSinhVienIT() {
-            System.out.println("------ ");
-            SinhVienIT sv = new SinhVienIT();
-            System.out.print("Mã Sinh Viên = ");
-            String id = sc.nextLine();
-            sv.setId(id);
-            System.out.print("Tên Sinh Viên = ");
-            String fullName = sc.nextLine();
-            sv.setFullName(fullName);
-            System.out.print("Giới Tính = ");
-            String gender = sc.nextLine();
-            sv.setGender(gender);
-            System.out.print("Chuyên Ngành = ");
-            String major = sc.nextLine();
-            sv.setMajor(major);
-            System.out.print("Kỹ Thuật = ");
-            String technical = sc.nextLine();
-            sv.setTechnical(technical);
-            System.out.println("------ ");
-            return sv;
+        System.out.println("------ ");
+        System.out.print("Mã Sinh Viên = ");
+        String id = sc.nextLine();
+        System.out.print("Tên Sinh Viên = ");
+        String fullName = sc.nextLine();
+        System.out.print("Giới Tính = ");
+        String gender = sc.nextLine();
+        System.out.print("Chuyên Ngành = ");
+        String major = sc.nextLine();
+        System.out.print("Kỹ Thuật = ");
+        String technical = sc.nextLine();
+        System.out.print("Điểm Lập Trình Cơ Bản = ");
+        double diemLTCB = sc.nextDouble();
+        System.out.print("Điểm Lập Trình Nâng Cao = ");
+        double diemLTNC = sc.nextDouble();
+        sc.nextLine();
+        System.out.println("------ ");
+        return new SinhVienIT(id, fullName, gender, major, technical, diemLTCB, diemLTNC);
     }
 
     SinhVien inputDataSinhVienDesign() {
@@ -62,8 +61,13 @@ public class SinhVienService {
         String major = sc.nextLine();
         System.out.print("kỹ thuật vẽ = ");
         String paint = sc.nextLine();
+        System.out.print("Điểm Photoshop = ");
+        double diemPhotoshop = sc.nextDouble();
+        System.out.print("Điểm Thiết Kế Ảnh = ");
+        double diemThietKeAnh = sc.nextDouble();
+        sc.nextLine();
         System.out.println("------ ");
-        return new SinhVienDesign(id, fullName, gender, major, paint);
+        return new SinhVienDesign(id, fullName, gender, major, paint, diemPhotoshop, diemThietKeAnh);
     }
     public void outputDataSinhVien() {
         listStudent.forEach(e ->{
