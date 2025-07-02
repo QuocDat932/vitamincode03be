@@ -7,3 +7,7 @@ II. OOP (Object Oriented Programming)
          Public > Protected > Default > Private
             Private: Get | Set
 
+    2. Inheritance ( tính kế thừa )
+        + key:
+            *extend: kế thừa lớp cha - lớp cha nên để abstract class
+            *final: không cho các lớp khác kế thừa lớp final
